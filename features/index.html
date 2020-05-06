@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <title>Student Grade Table</title>
+  <style>
+    table, th, td {
+      margin: auto;
+      border: 1px solid black;
+      text-align: center;
+      padding: 1px;
+    }
+    tr:nth-child(even) {
+  background-color: #eeeeee;
+    }
+
+    th{
+      background-color: #c1c1c1;
+      height: 60px;
+    }
+
+    h3{
+      position:relative;
+      left:2%;
+    }
+  </style>
+</head>
+<body>
+  <h3>Student Grade Table</h3>
+  <table class = "col-11">
+    <tr>
+      <th>Student Name</th>
+      <th>Course</th>
+      <th>Grade</th>
+    </tr>
+    <tr>
+      <td>Tim Berners-Lee</td>
+      <td>Web Development</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Scott Bowler</td>
+      <td>Web Development</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Tim Davis</td>
+      <td>Web Development</td>
+      <td>50</td>
+    </tr>
+  </table>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="./components/app.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
