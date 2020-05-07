@@ -13,7 +13,6 @@ class App {
   }
 
   getGrades(){
-    debugger;
     $.ajax({
       type: "GET",
       url:"https://sgt.lfzprototypes.com/api/grades",
