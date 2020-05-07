@@ -10,6 +10,8 @@ class App {
   }
 
   handleGetGradesSuccess(grades) {
+    debugger;
+    console.log(grades);
     this.gradeTable.updateGrades(grades);
   }
 

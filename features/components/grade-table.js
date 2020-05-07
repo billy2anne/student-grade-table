@@ -6,9 +6,4 @@ class GradeTable {
   updateGrades(grades){
     console.log(grades);
   }
-
-
-
-
-
 }
