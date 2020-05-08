@@ -23,12 +23,30 @@
 
     h3{
       position:relative;
-      left:2%;
+      left:3%;
     }
+
+    header{
+      margin-top: 2%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .averageGrade{
+     text-align: right;
+     padding-right: 4%;
+
+    }
+
   </style>
 </head>
 <body>
-  <h3>Student Grade Table</h3>
+  <header>
+    <h3 class="col-6">Student Grade Table</h3>
+    <h4 class = "col-6 averageGrade">Average Grade <span class="badge badge-secondary">23</span></h4>
+    <!-- <div class="average grade col-6">Average Grade</div> -->
+  </header>
+
   <table class = "col-11">
     <thead>
       <tr>
