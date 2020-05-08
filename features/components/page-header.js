@@ -4,7 +4,7 @@
       this.headerElement = headerElement;
     }
 
-    updateParameter(newAverage){
+    updateAverage(newAverage){
       console.log(newAverage);
     }
 
