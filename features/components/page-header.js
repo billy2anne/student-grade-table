@@ -8,8 +8,4 @@
       console.log(newAverage);
     }
 
-
-
-
-
   }
