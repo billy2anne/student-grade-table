@@ -5,6 +5,7 @@ class GradeTable {
 
   updateGrades(grades){
     var tBody = this.tableElement.querySelector('tbody');
+    $('tBody').empty();
     for(var i = 0; i < grades.length; i++){
     //table data
       var grade = grades[i].grade;
