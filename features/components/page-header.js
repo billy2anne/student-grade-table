@@ -5,7 +5,7 @@
     }
 
     updateAverage(newAverage){
-      console.log(newAverage);
+      var badge = this.headerElement.querySelector('.badge-secondary');
+      badge.textContent = newAverage;
     }
-
   }

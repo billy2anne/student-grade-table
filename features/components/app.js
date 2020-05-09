@@ -13,8 +13,6 @@ class App {
   handleGetGradesSuccess(grades) {
     var currentAverage = this.gradeTable.updateGrades(grades);
     this.pageHeader.updateAverage(currentAverage)
-
-
   }
 
   getGrades(){
