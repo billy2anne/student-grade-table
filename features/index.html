@@ -4,31 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Student Grade Table</title>
-  <style>
-    table, th, td {
-      margin: auto;
-      border: 1px solid black;
-      text-align: center;
-      padding: 1px;
-    }
-    tr:nth-child(even) {
-  background-color: #eeeeee;
-    }
-
-    th{
-      background-color: #c1c1c1;
-      height: 60px;
-    }
-
-    h3{
-      position:relative;
-      left:2%;
-    }
-  </style>
 </head>
 <body>
-  <h3>Student Grade Table</h3>
+  <header>
+    <h3 class="col-6">Student Grade Table</h3>
+    <h4 class = "col-6 averageGrade">Average Grade <span class="badge badge-secondary"></span></h4>
+  </header>
   <table class = "col-11">
     <thead>
       <tr>
@@ -44,6 +27,7 @@
   </script>
   <script src="./components/app.js"></script>
   <script src="./components/grade-table.js"></script>
+  <script src="./components/page-header.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
