@@ -4,13 +4,12 @@ class GradeTable {
   }
 
   updateGrades(grades){
-    //emptyBody
     var tBody = this.tableElement.querySelector('tbody');
     $('tBody').empty();
-    var avgGrades = [];
-
+    var gradesList = [];
     for(var i = 0; i < grades.length; i++){
-    //store table data
+
+    //table data
       var grade = grades[i].grade;
       var name = grades[i].name;
       var course = grades[i].course;
@@ -27,16 +26,16 @@ class GradeTable {
     //append new table data to new row and then append row to table body
       row.append(studentName, studentCourse, studentGrade);
       tBody.appendChild(row);
-      avgGrades.push(grade);
+      gradesList.push(grade);
+
     }
 
     //Calculate Average Students'Grade
     var sum = 0;
-    for( var i = 0; i < avgGrades.length; i++){
-      var studentGrade = avgGrades[i];
+    for( var i = 0; i < gradesList.length; i++){
+      var studentGrade = gradesList[i];
       sum = sum + studentGrade;
-      var numberOfStudents = avgGrades.length;
-      var average = sum/numberOfStudents
+      var average = sum/gradesList.length
     }
     return average;
   }
