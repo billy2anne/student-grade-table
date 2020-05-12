@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Student Grade Table</title>
 </head>
@@ -12,17 +13,46 @@
     <h3 class="col-6">Student Grade Table</h3>
     <h4 class = "col-6 averageGrade">Average Grade <span class="badge badge-secondary"></span></h4>
   </header>
-  <table class = "col-11">
-    <thead>
-      <tr>
-        <th>Student Name</th>
-        <th>Course</th>
-        <th>Grade</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+  <div class="container col-12">
+    <table class = "col-9">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Course</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+      <form>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+          </div>
+          <input type="text" class="form-control" name="name" placeholder="Name" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-list-alt"></i></span>
+          </div>
+          <input type="text" class="form-control" name="course" placeholder="Course" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fas fa-graduation-cap"></i></span>
+          </div>
+          <input type="text" class="form-control" name="grade" placeholder="Grade" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+        <div>
+          <button type="submit" class="btn btn-success">Add</button>
+          <button type="reset" class="btn btn-outline-dark">Cancel</button>
+        </div>
+      </form>
+    </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
   </script>
   <script src="./components/app.js"></script>
