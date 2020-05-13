@@ -40,6 +40,20 @@ class App {
     console.log(name);
     console.log(course);
     console.log(grade);
+    $.ajax({
+      type: "POST",
+      url: "https://sgt.lfzprototypes.com/api/grades",
+      headers: {
+      "X-Access-Token": "3A1U0wCu"
+      },
+      data: {
+        "name": name,
+        "course": course,
+        "grade": grade,
+      },
+      success: this.handleCreateGradesSuccess,
+      error: this.handleCreateGradesError
+    })
   }
 
   handleCreateGradeError(error){
