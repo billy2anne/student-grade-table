@@ -1,13 +1,16 @@
 class GradeTable {
+
   constructor(tableElement){
     this.tableElement = tableElement
   }
 
   updateGrades(grades){
+
     var tBody = this.tableElement.querySelector('tbody');
     $('tBody').empty();
     var gradesList = [];
-    for(var i = 0; i < grades.length; i++){
+
+    for(var i = 0; i < grades.length; i++ ) {
 
     //table data
       var grade = grades[i].grade;
@@ -35,8 +38,8 @@ class GradeTable {
     for( var i = 0; i < gradesList.length; i++){
       var studentGrade = gradesList[i];
       sum = sum + studentGrade;
-      var average = sum/gradesList.length
+      var average = sum/gradesList.length;
     }
-    return average;
+    return Math.round(average);
   }
 }
