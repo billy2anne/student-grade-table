@@ -38,8 +38,7 @@ class GradeTable {
     for( var i = 0; i < gradesList.length; i++){
       var studentGrade = gradesList[i];
       sum = sum + studentGrade;
-      var average = sum/gradesList.length;
     }
-    return Math.round(average);
+    return Math.round(sum / gradesList.length);
   }
 }

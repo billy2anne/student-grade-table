@@ -37,9 +37,6 @@ class App {
   }
 
   createGrade(name, course, grade){
-    console.log(name);
-    console.log(course);
-    console.log(grade);
     $.ajax({
       type: "POST",
       url: "https://sgt.lfzprototypes.com/api/grades",
