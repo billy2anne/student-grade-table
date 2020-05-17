@@ -25,9 +25,16 @@ class GradeTable {
       studentCourse.textContent = course;
       var studentGrade = document.createElement('td');
       studentGrade.textContent = grade;
+      var deleteButtonArea = document.createElement('td');
+      var deleteButton = document.createElement('button');
+      deleteButton.textContent = "Delete";
+
+
+
 
     //append new table data to new row and then append row to table body
-      row.append(studentName, studentCourse, studentGrade);
+      deleteButtonArea.append(deleteButton);
+      row.append(studentName, studentCourse, studentGrade, deleteButtonArea);
       tBody.appendChild(row);
       gradesList.push(grade);
 
