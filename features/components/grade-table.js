@@ -8,6 +8,11 @@ class GradeTable {
 
   updateGrades(grades){
     debugger;
+    if(!grades){
+      var ptag = document.querySelector('p')
+      ptag.classList.add('d-block');
+    }
+
     var tBody = this.tableElement.querySelector('tbody');
     $('tBody').empty();
     var gradesList = [];
@@ -47,7 +52,8 @@ class GradeTable {
     studentCourse.textContent = course;
     var studentGrade = document.createElement('td');
     studentGrade.textContent = grade;
-    //
+
+    //delete button created with clickhandler added
     var deleteButtonArea = document.createElement('td');
     var deleteButton = document.createElement('button');
     deleteButton.textContent = "Delete";
