@@ -9,14 +9,13 @@ class GradeTable {
   updateGrades(grades){
     debugger;
     if(!grades){
-      var ptag = document.querySelector('p')
-      ptag.classList.add('d-block');
+      this.noGradesElement.classList.add('d-block');
     }
 
     var tBody = this.tableElement.querySelector('tbody');
     $('tBody').empty();
-    var gradesList = [];
 
+    var gradesList = [];
     for(var i = 0; i < grades.length; i++ ) {
       var grade = grades[i];
       var row = this.renderGradeRow(grade, this.deleteGrade);
@@ -57,7 +56,7 @@ class GradeTable {
     var deleteButtonArea = document.createElement('td');
     var deleteButton = document.createElement('button');
     deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", this.deleteGrade);
+    deleteButton.addEventListener("click", () => deleteGrade(data.id));
     deleteButtonArea.append(deleteButton);
 
     //append new table data to new row
