@@ -1,6 +1,5 @@
 var table = document.querySelector('table');
 var header = document.querySelector('header');
-
 var form = document.querySelector('form');
 
 //instantiate classes

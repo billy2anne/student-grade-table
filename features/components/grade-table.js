@@ -1,43 +1,22 @@
 class GradeTable {
 
   constructor(tableElement){
-    this.tableElement = tableElement
+    this.tableElement = tableElement;
+
   }
 
   updateGrades(grades){
-
+    debugger;
+    console.log(grades);
     var tBody = this.tableElement.querySelector('tbody');
     $('tBody').empty();
     var gradesList = [];
 
     for(var i = 0; i < grades.length; i++ ) {
-
-    //table data
-      var grade = grades[i].grade;
-      var name = grades[i].name;
-      var course = grades[i].course;
-
-    //create table data and modify text content to show student data
-      var row = document.createElement('tr');
-      var studentName = document.createElement('td');
-      studentName.textContent = name;
-      var studentCourse = document.createElement('td');
-      studentCourse.textContent = course;
-      var studentGrade = document.createElement('td');
-      studentGrade.textContent = grade;
-      var deleteButtonArea = document.createElement('td');
-      var deleteButton = document.createElement('button');
-      deleteButton.textContent = "Delete";
-
-
-
-
-    //append new table data to new row and then append row to table body
-      deleteButtonArea.append(deleteButton);
-      row.append(studentName, studentCourse, studentGrade, deleteButtonArea);
+      var grade = grades[i];
+      var row = this.renderGradeRow(grade, this.deleteGrade);
       tBody.appendChild(row);
-      gradesList.push(grade);
-
+      gradesList.push(grade.grade);
     }
 
     //Calculate Average Students'Grade
@@ -47,5 +26,36 @@ class GradeTable {
       sum = sum + studentGrade;
     }
     return Math.round(sum / gradesList.length);
+  }
+
+  onDeleteClick(deleteGrade){
+    this.deleteGrade = deleteGrade;
+  }
+
+  renderGradeRow(data, deleteGrade){
+    debugger;
+    //table data
+    var row = document.createElement('tr');
+    var grade = data.grade;
+    var name = data.name;
+    var course = data.course;
+
+    //create table data and modify text content to show student data
+    var studentName = document.createElement('td');
+    studentName.textContent = name;
+    var studentCourse = document.createElement('td');
+    studentCourse.textContent = course;
+    var studentGrade = document.createElement('td');
+    studentGrade.textContent = grade;
+
+    var deleteButtonArea = document.createElement('td');
+    var deleteButton = document.createElement('button');
+    deleteButton.textContent = "Delete";
+    deleteButtonArea.append(deleteButton);
+
+    //append new table data to new row
+    row.append(studentName, studentCourse, studentGrade, deleteButtonArea);
+
+    return row
   }
 }
