@@ -65,6 +65,7 @@ class App {
   }
 
   deleteGrade(id){
+    debugger;
     console.log(id);
   }
 

@@ -1,13 +1,13 @@
 class GradeTable {
 
-  constructor(tableElement){
+  constructor(tableElement, noGradesElement){
     this.tableElement = tableElement;
+    this.noGradesElement = noGradesElement;
 
   }
 
   updateGrades(grades){
     debugger;
-    console.log(grades);
     var tBody = this.tableElement.querySelector('tbody');
     $('tBody').empty();
     var gradesList = [];
@@ -47,10 +47,11 @@ class GradeTable {
     studentCourse.textContent = course;
     var studentGrade = document.createElement('td');
     studentGrade.textContent = grade;
-
+    //
     var deleteButtonArea = document.createElement('td');
     var deleteButton = document.createElement('button');
     deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", this.deleteGrade);
     deleteButtonArea.append(deleteButton);
 
     //append new table data to new row
