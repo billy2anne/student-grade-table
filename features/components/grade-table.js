@@ -7,10 +7,7 @@ class GradeTable {
   }
 
   updateGrades(grades){
-    debugger;
-    if(!grades){
-      this.noGradesElement.classList.add('d-block');
-    }
+
 
     var tBody = this.tableElement.querySelector('tbody');
     $('tBody').empty();
@@ -23,12 +20,17 @@ class GradeTable {
       gradesList.push(grade.grade);
     }
 
+    if(!gradesList[0]){
+     var p = $(this.noGradesElement).removeClass('d-none');
+    }
+
     //Calculate Average Students'Grade
     var sum = 0;
     for( var i = 0; i < gradesList.length; i++){
       var studentGrade = gradesList[i];
       sum = sum + studentGrade;
     }
+
     return Math.round(sum / gradesList.length);
   }
 
@@ -37,7 +39,7 @@ class GradeTable {
   }
 
   renderGradeRow(data, deleteGrade){
-    debugger;
+
     //table data
     var row = document.createElement('tr');
     var grade = data.grade;
@@ -55,6 +57,7 @@ class GradeTable {
     //delete button created with clickhandler added
     var deleteButtonArea = document.createElement('td');
     var deleteButton = document.createElement('button');
+    $(deleteButton).addClass("btn btn-danger");
     deleteButton.textContent = "Delete";
     deleteButton.addEventListener("click", () => deleteGrade(data.id));
     deleteButtonArea.append(deleteButton);
